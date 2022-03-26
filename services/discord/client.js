@@ -1,8 +1,6 @@
-const fs = require('node:fs');
-const fetch = require('node-fetch');
 const { Client, Collection, Intents, MessageEmbed } = require('discord.js');
 
-module.exports = function() {
+module.exports = async function() {
   const token = process.env.DISCORD_BOT_TOKEN;
   const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES] });
 
